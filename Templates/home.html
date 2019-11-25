@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Eunoia Task</title>
+</head>
+<body>
+    <body style="background-color:powderblue;">
+    <h2>Welcome to the most<em> absolutely beautiful</em> website ever.</h2>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul>
+                {% for message in messages %}
+                <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+
+    <a href="/addrec">Add New Company</a><br>
+    <a href="/editrec">Edit Company Accounts List</a><br>
+    <a href="/showrec">Show Company Accounts List</a><br>
+    <a href="/deleterec">Delete Company and Accounts</a>
+</body>
+</html>

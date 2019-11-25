@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Enter New Company</title>
+</head>
+<body>
+    <body style="background-color:powderblue;">
+    <form action="{{ url_for('editrec') }}" method = "POST" id="account_select">
+        <h3>Update Accounts for Company</h3>
+        <label for="companyname">Company Name</label><br>
+        <input type = 'text' name = "companyname" style="text-transform: uppercase" onkeyup="this.value = this.value.toUpperCase();" value ="{{companyid_name.1}}"></br>
+        <label for="accountsel">Select Accounts</label><br>
+        <select multiple name="accountsel" size="50" style="height: 10%;">
+        {% for account in accounts %}
+            {% if account[0] in selection %}
+                <option value={{account[0]}} selected="selected">{{ account[1] }}</option>
+            {% else %}
+                <option value={{account[0]}}>{{ account[1] }}</option>
+            {% endif %}      
+        {% endfor %}
+        </select>
+        <input type="hidden" name="notempty" value="">
+        <input type = "submit" value = "submit" /><br>
+    </form>
+
+    <form action=""></form>
+</body>
+</html>

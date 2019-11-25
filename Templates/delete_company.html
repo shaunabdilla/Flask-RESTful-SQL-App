@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Display Company Accounts</title>
+</head>
+<body>
+    <body style="background-color:powderblue;">
+    <form action="{{ url_for('deleterec') }}" method ="POST" id="company_select">
+        <h3>Enter Company Name you want to Delete</h3>
+        Company Name<br>
+        <input type = 'text' name = "companyname" style="text-transform: uppercase" onkeyup="this.value = this.value.toUpperCase();"></br>
+        <input type = "submit" value = "submit" /><br>
+    </form>
+</body>
+</html>
